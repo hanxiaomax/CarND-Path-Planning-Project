@@ -5,7 +5,35 @@ code compiles perfectly, and a header file spline.h is add to provide Cubic spli
 
 ## Valid Trajectories
 
+|||
+|:---:|:---|
+|The car is able to drive at least 4.32 miles without incident..|I ran the simulator for 5 miles without incidents|
+|The car drives according to the speed limit.|The car speed is around 40-49 mph|
+|Max Acceleration and Jerk are not Exceeded|true|
+|The car stays in its lane, except for the time between changing lanes.|true|
+|The car is able to change lanes|true|
+
 ## Reflection
+
+to make a valid trajectories need 3 steps
+
+#### Prediction 
+using sensor fusion data to detect the environment,trying to figure out if:
+
+- there is a car to the right of us making a lane change not safe
+- there is a car to the left of us making a lane change not safe
+- there is a car in front of us and the traffic is blocked.
+
+first we need to calculated the car's position at the end of the planed path and the lane the car is driving, if the distance between our car and others is more than 30, it is considered to be safe when switching the lane.
+
+
+#### decide what behavior should be taken 
+
+Based on the prediction of the situation we are in, this code increases or decrease speed, or switch lane when it is safe and necessary
+
+#### Making Trajectory 
+This code does the calculation of the trajectory based on the speed and lane output from the behavior, car coordinates and past path points.
+
 
 
 # CarND-Path-Planning-Project
