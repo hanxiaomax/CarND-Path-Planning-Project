@@ -13,6 +13,8 @@ code compiles perfectly, and a header file spline.h is add to provide Cubic spli
 |The car stays in its lane, except for the time between changing lanes.|true|
 |The car is able to change lanes|true|
 
+![](./Xnip2019-05-03_21-06-57.png)
+
 ## Reflection
 
 to make a valid trajectories need 3 steps
